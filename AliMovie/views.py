@@ -8,9 +8,9 @@ from django.contrib import messages
 def home(request):
     if request.method == "POST":
         name = request.POST['username']
-        return render(request, 'home.html', {'name': name})
+        return render(request, 'index.html', {'name': name})
     else:
-        return render(request, 'home.html')
+        return render(request, 'index.html')
 
 
 def login(request):
