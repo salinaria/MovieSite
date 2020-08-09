@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Login</title>
+</head>
+<body style="background-color: #2d2d2d">
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-warning " role="alert">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+<li style="padding-top: 100px ; padding-left: 40% ;">
+    <form method="POST">
+        <div class="card text-center " style="width: 18rem">
+            <div class="card-body">
+                <h5 class="card-title">Log in</h5>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    {% csrf_token %}
+                    <input type="search" class="form-control" id="username" name="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    {% csrf_token %}
+                    <input type="password" class="form-control" id="password" name="password">
+                </div>
+                <button type="submit" class="btn btn-primary">Log in</button>
+                <h6>
+                    Don't have account?
+                    <a href="signup.html">Sign up</a>
+                </h6>
+            </div>
+        </div>
+    </form>
+</li>
+</body>
+</html>
