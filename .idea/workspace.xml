@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a702fa9a-2813-4c79-ad1e-3fb5f6c182fb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AliMovie/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/AliMovie/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AliMovie/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/AliMovie/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +80,8 @@
       <workItem from="1596957885066" duration="5152000" />
       <workItem from="1596965883218" duration="12859000" />
       <workItem from="1596979722045" duration="43000" />
+      <workItem from="1596988230016" duration="63000" />
+      <workItem from="1596988303412" duration="1117000" />
     </task>
     <servers />
   </component>
@@ -127,9 +128,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1596958689241" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1596979722538">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1596988308936">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1596979722538" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1596988308936" />
   </component>
 </project>
