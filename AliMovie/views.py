@@ -6,7 +6,8 @@ from django.contrib import messages
 
 # Create your views here.
 def home(request):
-    if request.session['name'] is not None:
+    request.session.load()
+    if 'name' in request.session and request.session['name'] is not None:
         return render(request, 'index.html', {'name': request.session['name']})
     else:
         return render(request, 'index.html')
@@ -21,7 +22,9 @@ def login(request):
             if account.username == name and account.password == pass1:
                 messages.success(request, 'You signed in successfully')
                 check = True
+                request.session.modified = True
                 request.session['name'] = name
+                request.session.save()
                 return redirect('home')
         if not check:
             messages.success(request, 'Incorrect username or password.')
@@ -31,8 +34,10 @@ def login(request):
 
 
 def logout(request):
+    request.session.modified = True
     request.session['name'] = None
-    return home(request)
+    request.session.save()
+    return redirect('home')
 
 
 def signup(request):
