@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
+
 {% block content %}
     {% if messages %}
         {% for message in messages %}
-            <div class="alert alert-warning " role="alert">
+            <div class="alert alert-warning d-flex justify-content-center " role="alert">
                 {{ message }}
             </div>
         {% endfor %}
     {% endif %}
     {% if name %}
-        <h1>Hello {{ name }}!</h1>
+        <h1 style="color: azure">Hello {{ name }}!</h1>
     {% endif %}
 {% endblock %}

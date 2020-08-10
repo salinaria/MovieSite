@@ -8,17 +8,17 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <title>Login</title>
+    <title>Sing up</title>
 </head>
 <body style="background-color: #2d2d2d">
 {% if messages %}
     {% for message in messages %}
-        <div class="alert alert-warning " role="alert">
+        <div class="alert alert-warning d-flex justify-content-center" role="alert">
             {{ message }}
         </div>
     {% endfor %}
 {% endif %}
-<li style="padding-top: 100px ; padding-left: 40% ;">
+<li class="d-flex justify-content-center" style="padding-top: 100px ;">
     <form method="POST">
         <div class="card text-center " style="width: 18rem">
             <div class="card-body">

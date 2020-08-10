@@ -13,12 +13,12 @@
 <body style="background-color: #2d2d2d">
 {% if messages %}
     {% for message in messages %}
-        <div class="alert alert-warning " role="alert">
+        <div class="alert alert-warning d-flex justify-content-center " role="alert">
             {{ message }}
         </div>
     {% endfor %}
 {% endif %}
-<li style="padding-top: 100px ; padding-left: 40% ;">
+<li class="d-flex justify-content-center" style="padding-top: 100px ">
     <form method="POST">
         <div class="card text-center " style="width: 18rem">
             <div class="card-body">

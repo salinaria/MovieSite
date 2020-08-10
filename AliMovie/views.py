@@ -6,9 +6,8 @@ from django.contrib import messages
 
 # Create your views here.
 def home(request):
-    if request.method == "POST":
-        name = request.POST['username']
-        return render(request, 'index.html', {'name': name})
+    if request.session['name'] is not None:
+        return render(request, 'index.html', {'name': request.session['name']})
     else:
         return render(request, 'index.html')
 
@@ -22,12 +21,18 @@ def login(request):
             if account.username == name and account.password == pass1:
                 messages.success(request, 'You signed in successfully')
                 check = True
+                request.session['name'] = name
                 return redirect('home')
         if not check:
             messages.success(request, 'Incorrect username or password.')
             return render(request, 'login.html')
     else:
         return render(request, 'login.html')
+
+
+def logout(request):
+    request.session['name'] = None
+    return home(request)
 
 
 def signup(request):
